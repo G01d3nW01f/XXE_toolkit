@@ -123,6 +123,8 @@ php xxe_decode.php <base64_string>
 ```
 php xxe_decode.php eJyrVkrLz1eyUkpKLFKqBQBKDQME
 ```
+
+
 ### Output
 ```
 root:x:0:0:root:/root:/bin/bash
