@@ -1,21 +1,21 @@
 #!/usr/bin/php
 
 <?php
-// 1. 引数のチェック（スクリプト名 + エンコード文字列が必要なので 2 未満をチェック）
+// 1. argument check
 if ($argc < 2) {
     echo "Usage: php " . $argv[0] . " <base64_encoded_string>\n";
     exit(1);
 }
 
-// 2. 引数から文字列を取得
+// 2. get string from argument
 $input = $argv[1];
 
-// 3. デコード処理
-// base64_decode: Base64形式をバイナリに戻す
-// zlib_decode: DEFLATE/ZLIB 圧縮を解凍する
+// 3. decode
+// base64_decode: decode binary from Base64
+// zlib_decode: extract DEFLATE/ZLIB archive
 $decoded = zlib_decode(base64_decode($input));
 
-// 4. 結果の出力
+// 4. output result
 if ($decoded !== false) {
     echo $decoded . "\n";
 } else {
