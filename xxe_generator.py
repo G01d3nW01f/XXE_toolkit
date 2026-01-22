@@ -55,7 +55,6 @@ def main():
     dtd_payload_gen(host, file_path)
     wav_payload_gen(host)
 
-
 if __name__ == "__main__":
 
     main()
